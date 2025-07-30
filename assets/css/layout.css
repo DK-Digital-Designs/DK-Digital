@@ -1,0 +1,58 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: transform 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn-block {
+  width: 100%;
+  text-align: center;
+}
+
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: var(--accent);
+  width: 0;
+  z-index: 200;
+  transition: width 0.2s ease-out;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.25rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}

@@ -1,0 +1,6 @@
+[
+  { "icon": "svg/beaker.svg",  "title": "Web Design",       "desc": "Cutting-edge layouts & vibrant visuals." },
+  { "icon": "svg/bolt.svg",    "title": "Development",      "desc": "Robust, scalable, and lightning-fast." },
+  { "icon": "svg/library.svg", "title": "SEO & Marketing",  "desc": "Get found & convert with ease." },
+  { "icon": "svg/spider.svg",  "title": "Support",          "desc": "24/7 assistance & peace of mind." }
+]

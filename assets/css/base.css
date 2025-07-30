@@ -1,0 +1,30 @@
+:root {
+  --bg: #0a0a0a;
+  --fg: #fff;
+  --accent: #ff4d4d;
+}
+[data-theme="light"] {
+  --bg: #fff;
+  --fg: #111;
+  --accent: #4d79ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1, h2, h3 {
+  font-weight: 700;
+}

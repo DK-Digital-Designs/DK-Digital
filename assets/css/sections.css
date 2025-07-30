@@ -1,0 +1,217 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #ff4d4d, #ffb84d);
+}
+.hero-video .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero-content h1,
+.hero-content p,
+.hero-content .btn {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.animate {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.services, .about, .testimonials, .faq, .team, .footer {
+  padding: 6rem 0;
+}
+
+/* ...Include the rest from services, about, testimonials, faq, team, footer here... */
+/* To keep sections.css focused, group by section name like `.services`, `.about`, etc. */
+
+/* SECTION TITLES */
+.section-title {
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* SERVICES */
+.services {
+  padding: 6rem 0;
+}
+.services .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s;
+}
+.card:hover {
+  transform: translateY(0);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+}
+.card img {
+  width: 60px;
+  margin-bottom: 1rem;
+  filter: hue-rotate(45deg);
+}
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #ffb84d;
+}
+
+/* ABOUT */
+.about {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #4d79ff, #4dd2ff);
+  color: #111;
+}
+.about .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.about-text h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+.about-image img {
+  border-radius: 12px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  text-align: center;
+  padding: 4rem 0;
+}
+.testi-carousel {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+.testi-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.testi-slide.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.testi-quote {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.testi-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.testi-author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.testi-prev, .testi-next {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--accent);
+  cursor: pointer;
+  position: relative;
+  top: -100px;
+}
+.testi-prev { left: calc(50% - 100px); }
+.testi-next { left: calc(50% + 80px); }
+
+/* FAQ */
+.faq-item {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #444;
+}
+.faq-q {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.faq-q::after {
+  content: '+';
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.3s;
+}
+.faq-item.open .faq-q::after {
+  transform: rotate(45deg);
+}
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s;
+  padding: 0 1rem;
+}
+.faq-item.open .faq-a {
+  max-height: 200px;
+  padding: 1rem;
+}
+
+/* TEAM */
+.team-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.team-card {
+  text-align: center;
+  padding: 1rem;
+  background: #1a1a1a;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+.team-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,95 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  position: relative;
+  padding: 0.25rem 0;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--bg);
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 110;
+}
+
+
+/* FOOTER */
+.footer {
+  padding: 4rem 0;
+}
+.form-card {
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  padding: 2rem;
+  background: var(--bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #111;
+  color: #fff;
+}
+.footer-copy {
+  text-align: center;
+  color: #888;
+}
