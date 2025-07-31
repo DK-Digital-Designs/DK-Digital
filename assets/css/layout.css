@@ -1,32 +1,50 @@
+/* ====================================================
+   📦 Layout & Spacing
+==================================================== */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* ====================================================
+   🏷 Section Titles
+==================================================== */
 .section-title {
   margin: 2rem 0 1rem;
   font-size: 2rem;
   text-align: center;
+  color: var(--fg);
 }
 
+/* ====================================================
+   🔘 Buttons
+==================================================== */
 .btn {
   display: inline-block;
   padding: 1rem 2rem;
   background: var(--accent);
-  color: #fff;
+  color: hsl(0, 0%, 100%);
   border-radius: 50px;
   font-weight: 500;
-  transition: transform 0.3s;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
+
 .btn:hover {
   transform: scale(1.05);
+  background: hsl(0, 100%, 58%); /* slightly darker accent */
 }
+
 .btn-block {
   width: 100%;
   text-align: center;
 }
 
+/* ====================================================
+   📈 Scroll Progress Bar
+==================================================== */
 #progressBar {
   position: fixed;
   top: 0;
@@ -38,6 +56,9 @@
   transition: width 0.2s ease-out;
 }
 
+/* ====================================================
+   ⬆️ Back to Top Button
+==================================================== */
 #backToTop {
   position: fixed;
   bottom: 2rem;
@@ -45,14 +66,26 @@
   padding: 0.5rem 0.75rem;
   font-size: 1.25rem;
   background: var(--accent);
-  color: #fff;
+  color: hsl(0, 0%, 100%);
   border: none;
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s;
+  z-index: 150;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
 }
+
 #backToTop.show {
   opacity: 1;
   pointer-events: auto;
 }
+
+/* ====================================================
+   💡 Suggestions for Enhancement
+==================================================== */
+/*
+1. Add .grid utility class? (can be used in multiple sections)
+2. Support responsive typography using clamp()?
+3. Optionally add spacing utility classes (.mb-2, .py-4)
+*/

@@ -2,31 +2,42 @@
 <html lang="en" data-theme="">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DK Digital</title>
 
+  <!-- 🧠 Inline critical styles (for FCP optimization) -->
   <style>
     body { margin: 0; font-family: 'Poppins', sans-serif; }
-    .nav-container, .hero { visibility: visible; }
+    .nav-container, .hero { visibility: visible; } /* ensures visibility before JS loads */
   </style>
 
+  <!-- 🧵 Main stylesheet -->
   <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- 📦 Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- 🎞️ Animation Library -->
   <script async src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+  <!-- 💡 Suggestions:
+      - Consider using <link rel="preload"> for fonts/css for even faster FCP
+      - Include favicon & social meta tags for brand presence
+  -->
 </head>
 
 <body>
 
-  <!-- Header include -->
+  <!-- 🧩 Header will be dynamically injected via JS -->
   <div id="header-include"></div>
 
+  <!-- 📈 Scroll progress bar -->
   <div id="progressBar"></div>
-  <button id="themeToggle" aria-label="Toggle theme" class="theme-toggle">🌙</button>
 
-  <!-- HERO -->
+  <!-- 🎬 HERO Section -->
   <section id="hero" class="hero hero-video">
     <video autoplay muted loop playsinline class="hero-bg">
-      <source src="assets/hero.mp4" type="video/mp4">
+      <source src="/assets/images/hero.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="hero-content container">
@@ -36,11 +47,13 @@
     </div>
   </section>
 
+  <!-- 🛠️ Services Section -->
   <section id="services" class="services container" data-section>
     <h2 class="section-title">Our Services</h2>
-    <div class="grid"></div>
+    <div class="grid"></div> <!-- Cards are injected via JS -->
   </section>
 
+  <!-- 🧠 About Section -->
   <section id="about" class="about container" data-section>
     <h2 class="section-title">About Us</h2>
     <div class="grid">
@@ -49,34 +62,42 @@
         <p>We blend creativity, performance, and next-gen tech to build websites that both look amazing and perform flawlessly.</p>
       </div>
       <div class="about-image">
-        <img src="assets/about.jpg" loading="lazy" alt="Team at work">
+        <img src="/assets/images/about.jpg" loading="lazy" alt="Team at work">
       </div>
     </div>
   </section>
 
+  <!-- 🧾 Testimonials Section -->
   <section id="testimonials" class="testimonials container" data-section>
     <h2 class="section-title">What Our Clients Say</h2>
-    <div class="testi-carousel"></div>
+    <div class="testi-carousel"></div> <!-- Populated via JS -->
     <button class="testi-prev" aria-label="Previous testimonial">‹</button>
     <button class="testi-next" aria-label="Next testimonial">›</button>
   </section>
 
+  <!-- ❓ FAQ Section -->
   <section id="faq" class="faq container" data-section>
     <h2 class="section-title">FAQ</h2>
-    <div class="faq-list"></div>
+    <div class="faq-list"></div> <!-- Accordion populated by JSON -->
   </section>
 
+  <!-- 👥 Team Section -->
   <section id="team" class="team container" data-section>
     <h2 class="section-title">Meet the Team</h2>
-    <div class="team-grid"></div>
+    <div class="team-grid"></div> <!-- Cards loaded via JS -->
   </section>
 
+  <!-- 🔝 Back to Top Button -->
   <button id="backToTop" aria-label="Back to top">↑</button>
 
-  <!-- Footer include -->
+  <!-- 🧩 Footer will be dynamically injected -->
   <div id="footer-include"></div>
 
- <script type="module" src="assets/js/main.js"></script>
+  <!-- 🧠 Modular JS: entry point -->
+  <script type="module" src="assets/js/main.js"></script>
+
+  <!-- 🌙 Theme toggle -->
+  <button id="themeToggle" aria-label="Toggle theme" class="theme-toggle">🌙</button>
 
 </body>
 </html>

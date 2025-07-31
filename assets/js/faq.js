@@ -8,12 +8,18 @@ export async function loadFAQ() {
     const item = document.createElement('div');
     item.className = 'faq-item';
     item.innerHTML = `
-      <button class="faq-q">${q}</button>
-      <div class="faq-a">${a}</div>
+      <button class="faq-q" aria-expanded="false">${q}</button>
+      <div class="faq-a" hidden>${a}</div>
     `;
-    list.append(item);
-    item.querySelector('.faq-q').addEventListener('click', () => {
-      item.classList.toggle('open');
+    const button = item.querySelector('.faq-q');
+    const answer = item.querySelector('.faq-a');
+
+    button.addEventListener('click', () => {
+      const isOpen = item.classList.toggle('open');
+      button.setAttribute('aria-expanded', isOpen);
+      answer.hidden = !isOpen;
     });
+
+    list.append(item);
   });
 }
