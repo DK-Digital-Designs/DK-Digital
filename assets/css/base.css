@@ -2,22 +2,36 @@
    🌈 Color Theme using HSL — light/dark mode supported
 ==================================================== */
 :root {
-  --bg: hsl(0, 0%, 10%);         /* near black */
-  --fg: hsl(0, 0%, 95%);        /* near white */
-  --accent: hsl(0, 100%, 64%);  /* red-ish coral */
-  --bg-header-rgb: 10, 10, 10;  /* fallback for rgba headers */
+  /* 🔳 Base Colors (Dark Theme Default) */
+  --bg: hsl(0, 0%, 10%);          /* near black background */
+  --fg: hsl(0, 0%, 95%);          /* near white text */
+  --accent: hsl(0, 100%, 64%);    /* warm coral red */
+  
+  /* 🧱 Structure / Layout */
+  --bg-dark: hsl(0, 0%, 10%);
+  --bg-light: hsl(220, 100%, 97%); /* light blue-grey for sections */
+  
+  /* 🎨 Foreground Variants */
+  --fg-light: hsl(0, 0%, 95%);
+  --fg-dark: hsl(220, 10%, 20%);
+  
+  /* 🖼️ Utility */
+  --bg-header-rgb: 10, 10, 10;    /* RGB fallback for transparency */
   --border-color: hsl(0, 0%, 20%);
   --muted: hsl(0, 0%, 70%);
 }
 
 [data-theme="light"] {
-  --bg: hsl(0, 0%, 85%);
-  --fg: hsl(0, 0%, 10%);
-  --accent: hsl(108, 73%, 53%);
+  /* 🌓 Light Theme Overrides */
+  --bg: hsl(0, 0%, 95%);            /* soft off-white background */
+  --fg: hsl(0, 0%, 10%);            /* deep black text */
+  --accent: hsl(108, 73%, 53%);     /* vibrant green */
+  
   --bg-header-rgb: 255, 255, 255;
   --border-color: hsl(0, 0%, 85%);
   --muted: hsl(0, 0%, 40%);
 }
+
 
 /* ==============================================
    🔄 Base Reset (Normalize & Consistency)

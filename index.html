@@ -20,10 +20,16 @@
   <!-- 🎞️ Animation Library -->
   <script async src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
 
-  <!-- 💡 Suggestions:
-      - Consider using <link rel="preload"> for fonts/css for even faster FCP
-      - Include favicon & social meta tags for brand presence
-  -->
+  <!-- SEO & Icons -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Goal Getters FC">
+  <meta name="theme-color" content="#000000">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
 </head>
 
 <body>
@@ -67,19 +73,28 @@
     </div>
   </section>
 
+  <!-- Highlight Section -->
+<section class="highlight-block">
+
   <!-- 🧾 Testimonials Section -->
   <section id="testimonials" class="testimonials container" data-section>
-    <h2 class="section-title">What Our Clients Say</h2>
-    <div class="testi-carousel"></div> <!-- Populated via JS -->
-    <button class="testi-prev" aria-label="Previous testimonial">‹</button>
-    <button class="testi-next" aria-label="Next testimonial">›</button>
+    <div class="container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="testi-carousel"></div> <!-- Populated via JS -->
+      <button class="testi-prev" aria-label="Previous testimonial">‹</button>
+      <button class="testi-next" aria-label="Next testimonial">›</button>
+    </div>
   </section>
 
   <!-- ❓ FAQ Section -->
   <section id="faq" class="faq container" data-section>
+    <div class="container">
     <h2 class="section-title">FAQ</h2>
     <div class="faq-list"></div> <!-- Accordion populated by JSON -->
+    </div>
   </section>
+
+</section>
 
   <!-- 👥 Team Section -->
   <section id="team" class="team container" data-section>
