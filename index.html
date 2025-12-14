@@ -1,118 +1,479 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="">
+﻿<!-- /index.html -->
+<!doctype html>
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DK Digital</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DK Digital — Websites that look premium and load fast</title>
+    <meta name="description" content="DK Digital designs and builds modern, high-performance websites for businesses that want better leads and a premium online presence." />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#0b0b0f" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="DK Digital" />
 
-  <!-- 🧠 Inline critical styles (for FCP optimization) -->
-  <style>
-    body { margin: 0; font-family: 'Poppins', sans-serif; }
-    .nav-container, .hero { visibility: visible; } /* ensures visibility before JS loads */
-  </style>
+    <!-- Open Graph -->
+    <meta property="og:title" content="DK Digital — Websites that look premium and load fast" />
+    <meta property="og:description" content="Modern websites, landing pages, and systems that convert." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/og.jpg" />
 
-  <!-- 🧵 Main stylesheet -->
-  <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
 
-  <!-- 📦 Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 
-  <!-- 🎞️ Animation Library -->
-  <script async src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <!-- Critical (tiny) -->
+    <style>
+        body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+        .no-js{padding:12px 16px;background:#111;color:#fff;font-size:14px}
+    </style>
 
-  <!-- SEO & Icons -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Goal Getters FC">
-  <meta name="theme-color" content="#000000">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-  <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
-  <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body>
+<noscript><div class="no-js">This site works best with JavaScript enabled (theme toggle + carousel).</div></noscript>
 
-  <!-- 🧩 Header will be dynamically injected via JS -->
-  <div id="header-include"></div>
+<!-- Scroll progress -->
+<div id="progressBar" aria-hidden="true"></div>
 
-  <!-- 📈 Scroll progress bar -->
-  <div id="progressBar"></div>
+<!-- Header (now inline, not injected) -->
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="DK Digital home">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-text">DK Digital</span>
+        </a>
 
-  <!-- 🎬 HERO Section -->
-  <section id="hero" class="hero hero-video">
-    <video autoplay muted loop playsinline class="hero-bg">
-      <source src="/assets/images/hero.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-content container">
-      <h1>DK Digital</h1>
-      <p>Crafting standout web experiences</p>
-      <a href="#services" class="btn">Explore Services</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="primaryNav" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" id="primaryNav" aria-label="Primary">
+            <a href="#services">Services</a>
+            <a href="#process">Process</a>
+            <a href="#work">Work</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact" class="nav-cta">Request a quote</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+                <span class="theme-icon" aria-hidden="true">☾</span>
+            </button>
+        </div>
     </div>
-  </section>
+</header>
 
-  <!-- 🛠️ Services Section -->
-  <section id="services" class="services container" data-section>
-    <h2 class="section-title">Our Services</h2>
-    <div class="grid"></div> <!-- Cards are injected via JS -->
-  </section>
+<main id="top">
+    <!-- Hero (video removed) -->
+    <section class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container hero-inner">
+            <div class="hero-copy">
+                <p class="eyebrow">Web design • Development • Performance</p>
+                <h1>Websites that look premium and load fast.</h1>
+                <p class="lead">
+                    DK Digital builds modern websites and landing pages that convert visitors into leads—optimized for speed, SEO, and mobile.
+                </p>
 
-  <!-- 🧠 About Section -->
-  <section id="about" class="about container" data-section>
-    <h2 class="section-title">About Us</h2>
-    <div class="grid">
-      <div class="about-text">
-        <h3>Why DK Digital?</h3>
-        <p>We blend creativity, performance, and next-gen tech to build websites that both look amazing and perform flawlessly.</p>
-      </div>
-      <div class="about-image">
-        <img src="/assets/images/about.jpg" loading="lazy" alt="Team at work">
-      </div>
+                <div class="hero-cta">
+                    <a class="btn btn-primary" href="#contact">Get a quote</a>
+                    <a class="btn btn-ghost" href="#work">View work</a>
+                </div>
+
+                <div class="trust-row" aria-label="Highlights">
+                    <div class="trust-pill"><strong>Fast</strong><span>Core Web Vitals focus</span></div>
+                    <div class="trust-pill"><strong>Clean</strong><span>Modern UI + UX</span></div>
+                    <div class="trust-pill"><strong>Secure</strong><span>Best-practice builds</span></div>
+                </div>
+            </div>
+
+            <div class="hero-card" aria-label="Snapshot">
+                <div class="mini-metric">
+                    <span class="k">Typical turnaround</span>
+                    <span class="v">7–21 days</span>
+                </div>
+                <div class="mini-metric">
+                    <span class="k">Best for</span>
+                    <span class="v">Businesses & personal brands</span>
+                </div>
+                <div class="mini-metric">
+                    <span class="k">Deliverables</span>
+                    <span class="v">Design + Build + Deploy</span>
+                </div>
+                <div class="mini-note">
+                    <span class="dot" aria-hidden="true"></span>
+                    <span>Hosting + domain guidance included</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services (now static HTML for SEO; can still be enhanced later) -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2>Services</h2>
+                <p>Pick a service or combine them into a full build.</p>
+            </div>
+
+            <div class="cards">
+                <article class="card">
+                    <div class="card-icon" aria-hidden="true">⚡</div>
+                    <h3>Landing Pages</h3>
+                    <p>High-converting pages for campaigns, products, and lead capture.</p>
+                    <ul class="bullets">
+                        <li>Copy/layout guidance</li>
+                        <li>Mobile-first design</li>
+                        <li>Analytics ready</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon" aria-hidden="true">🧱</div>
+                    <h3>Business Websites</h3>
+                    <p>Multi-page sites that feel premium, load fast, and rank well.</p>
+                    <ul class="bullets">
+                        <li>SEO fundamentals</li>
+                        <li>Modern UI components</li>
+                        <li>Easy maintenance</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon" aria-hidden="true">🛒</div>
+                    <h3>Basic E-Commerce</h3>
+                    <p>Simple storefronts for selling products/services with clear flows.</p>
+                    <ul class="bullets">
+                        <li>Product pages</li>
+                        <li>Checkout integration</li>
+                        <li>Admin-friendly setup</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon" aria-hidden="true">📈</div>
+                    <h3>SEO + Performance</h3>
+                    <p>Speed improvements, structure fixes, and content guidance.</p>
+                    <ul class="bullets">
+                        <li>Core Web Vitals</li>
+                        <li>On-page SEO</li>
+                        <li>Image optimization</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon" aria-hidden="true">🧩</div>
+                    <h3>Systems & Admin</h3>
+                    <p>Lightweight dashboards and internal tools for workflows.</p>
+                    <ul class="bullets">
+                        <li>Role-based access</li>
+                        <li>Forms + approvals</li>
+                        <li>Data views</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon" aria-hidden="true">🛠️</div>
+                    <h3>Care & Support</h3>
+                    <p>Ongoing improvements after launch, without vendor lock-in.</p>
+                    <ul class="bullets">
+                        <li>Monthly updates</li>
+                        <li>Content changes</li>
+                        <li>Monitoring</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="section section-alt">
+        <div class="container">
+            <div class="section-head">
+                <h2>Process</h2>
+                <p>Fast, structured, and transparent from start to launch.</p>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <h3>Discovery</h3>
+                    <p>Goals, audience, references, and scope locked in.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <h3>Design</h3>
+                    <p>Modern layout + components, built around conversion.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <h3>Build</h3>
+                    <p>Responsive, accessible, and performance-focused implementation.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">04</span>
+                    <h3>Launch</h3>
+                    <p>Domain, hosting, tracking, and final QA—then go live.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2>Work</h2>
+                <p>Examples of what we ship (replace images/links with your real projects).</p>
+            </div>
+
+            <div class="work-grid">
+                <a class="work-card" href="#" aria-label="Case study 1">
+                    <img src="assets/images/work-1.jpg" alt="Project preview 1" loading="lazy" />
+                    <div class="work-meta">
+                        <h3>Premium Landing Page</h3>
+                        <p>Lead capture • Fast load • Clean UI</p>
+                    </div>
+                </a>
+
+                <a class="work-card" href="#" aria-label="Case study 2">
+                    <img src="assets/images/work-2.jpg" alt="Project preview 2" loading="lazy" />
+                    <div class="work-meta">
+                        <h3>Business Website</h3>
+                        <p>Multi-page • SEO-ready • Mobile-first</p>
+                    </div>
+                </a>
+
+                <a class="work-card" href="#" aria-label="Case study 3">
+                    <img src="assets/images/work-3.jpg" alt="Project preview 3" loading="lazy" />
+                    <div class="work-meta">
+                        <h3>Admin + Workflow</h3>
+                        <p>Approvals • Dashboard • Roles</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section section-alt">
+        <div class="container">
+            <div class="section-head">
+                <h2>Pricing</h2>
+                <p>Simple packages. Final quotes depend on scope and timelines.</p>
+            </div>
+
+            <div class="pricing">
+                <article class="price-card">
+                    <h3>Starter</h3>
+                    <p class="price">From R2,999</p>
+                    <p class="muted">Single page / landing page.</p>
+                    <ul>
+                        <li>1 page</li>
+                        <li>Mobile-first</li>
+                        <li>Basic SEO</li>
+                        <li>Contact CTA</li>
+                    </ul>
+                    <a class="btn btn-ghost" href="#contact">Choose Starter</a>
+                </article>
+
+                <article class="price-card featured">
+                    <div class="badge">Most popular</div>
+                    <h3>Business</h3>
+                    <p class="price">From R7,999</p>
+                    <p class="muted">A full website for real businesses.</p>
+                    <ul>
+                        <li>Up to 6 pages</li>
+                        <li>Performance optimization</li>
+                        <li>SEO setup</li>
+                        <li>Analytics ready</li>
+                    </ul>
+                    <a class="btn btn-primary" href="#contact">Choose Business</a>
+                </article>
+
+                <article class="price-card">
+                    <h3>Pro</h3>
+                    <p class="price">From R14,999</p>
+                    <p class="muted">Advanced flows + systems.</p>
+                    <ul>
+                        <li>Custom sections</li>
+                        <li>Integrations</li>
+                        <li>Admin / dashboard</li>
+                        <li>Support plan</li>
+                    </ul>
+                    <a class="btn btn-ghost" href="#contact">Choose Pro</a>
+                </article>
+            </div>
+
+            <p class="small-note">
+                Note: Replace these placeholders with your real pricing and deliverables.
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials (light JS carousel) -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2>What clients say</h2>
+                <p>Short, specific feedback beats long paragraphs.</p>
+            </div>
+
+            <div class="testi" aria-label="Testimonials">
+                <button class="testi-btn" id="testiPrev" aria-label="Previous testimonial">‹</button>
+
+                <div class="testi-frame">
+                    <div class="testi-track" id="testiTrack">
+                        <figure class="testi-card">
+                            <blockquote>“Clean design and the site feels fast. Exactly what we needed.”</blockquote>
+                            <figcaption><strong>Client A</strong> <span class="muted">— Small Business</span></figcaption>
+                        </figure>
+                        <figure class="testi-card">
+                            <blockquote>“Quick turnaround, solid communication, and great attention to detail.”</blockquote>
+                            <figcaption><strong>Client B</strong> <span class="muted">— Personal Brand</span></figcaption>
+                        </figure>
+                        <figure class="testi-card">
+                            <blockquote>“Looks premium on mobile. Leads increased after launch.”</blockquote>
+                            <figcaption><strong>Client C</strong> <span class="muted">— Services</span></figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <button class="testi-btn" id="testiNext" aria-label="Next testimonial">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (no JS needed) -->
+    <section id="faq" class="section section-alt">
+        <div class="container">
+            <div class="section-head">
+                <h2>FAQ</h2>
+                <p>Clear answers to common questions.</p>
+            </div>
+
+            <div class="faq">
+                <details>
+                    <summary>How fast can you deliver?</summary>
+                    <p>Landing pages can be done in 7–10 days. Full sites typically take 2–3 weeks depending on scope and feedback speed.</p>
+                </details>
+                <details>
+                    <summary>Do you help with hosting and domains?</summary>
+                    <p>Yes. We can guide you to the right option and help you get everything connected correctly.</p>
+                </details>
+                <details>
+                    <summary>Can you maintain the site after launch?</summary>
+                    <p>Yes—monthly care is available for updates, improvements, and monitoring.</p>
+                </details>
+                <details>
+                    <summary>Can you work from my existing design?</summary>
+                    <p>Yes. We can build from references, Figma, or an existing site and modernize it.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2>Request a quote</h2>
+                <p>Tell us what you need. You’ll get a scope + estimate.</p>
+            </div>
+
+            <div class="contact-grid">
+                <form class="contact-form" autocomplete="on">
+                    <label>
+                        <span>Name</span>
+                        <input type="text" name="name" placeholder="Your name" required />
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" placeholder="you@example.com" required />
+                    </label>
+                    <label>
+                        <span>What do you need?</span>
+                        <select name="service" required>
+                            <option value="" selected disabled>Select a service</option>
+                            <option>Landing page</option>
+                            <option>Business website</option>
+                            <option>SEO + performance</option>
+                            <option>Systems / admin</option>
+                            <option>Other</option>
+                        </select>
+                    </label>
+                    <label class="full">
+                        <span>Message</span>
+                        <textarea name="message" rows="6" placeholder="Briefly describe the project, timeline, and any links..." required></textarea>
+                    </label>
+
+                    <!-- Replace with Formspree / Netlify Forms / your backend endpoint -->
+                    <button type="button" class="btn btn-primary" id="fakeSubmit">Send (wire up endpoint)</button>
+
+                    <p class="form-hint muted">
+                        For a real submission: connect this form to Formspree/Netlify Forms or your own API endpoint.
+                    </p>
+                </form>
+
+                <aside class="contact-side">
+                    <div class="side-card">
+                        <h3>What to include</h3>
+                        <ul class="bullets">
+                            <li>Business type + goal</li>
+                            <li>Pages/sections you want</li>
+                            <li>Examples you like</li>
+                            <li>Deadline (if any)</li>
+                        </ul>
+                    </div>
+                    <div class="side-card">
+                        <h3>Contact</h3>
+                        <p class="muted">Add your real details here:</p>
+                        <p><strong>Email:</strong> you@dkdigital.co.za</p>
+                        <p><strong>Location:</strong> South Africa</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+</main>
+
+<!-- Footer (now inline, not injected) -->
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="footer-left">
+            <div class="brand brand-footer">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span class="brand-text">DK Digital</span>
+            </div>
+            <p class="muted">Modern websites that convert.</p>
+        </div>
+
+        <div class="footer-links" aria-label="Footer links">
+            <a href="#services">Services</a>
+            <a href="#work">Work</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-right">
+            <p class="muted">© <span id="year"></span> DK Digital</p>
+        </div>
     </div>
-  </section>
+</footer>
 
-  <!-- Highlight Section -->
-<section class="highlight-block">
-
-  <!-- 🧾 Testimonials Section -->
-  <section id="testimonials" class="testimonials container" data-section>
-    <div class="container">
-      <h2 class="section-title">What Our Clients Say</h2>
-      <div class="testi-carousel"></div> <!-- Populated via JS -->
-      <button class="testi-prev" aria-label="Previous testimonial">‹</button>
-      <button class="testi-next" aria-label="Next testimonial">›</button>
-    </div>
-  </section>
-
-  <!-- ❓ FAQ Section -->
-  <section id="faq" class="faq container" data-section>
-    <div class="container">
-    <h2 class="section-title">FAQ</h2>
-    <div class="faq-list"></div> <!-- Accordion populated by JSON -->
-    </div>
-  </section>
-
-</section>
-
-  <!-- 👥 Team Section -->
-  <section id="team" class="team container" data-section>
-    <h2 class="section-title">Meet the Team</h2>
-    <div class="team-grid"></div> <!-- Cards loaded via JS -->
-  </section>
-
-  <!-- 🔝 Back to Top Button -->
-  <button id="backToTop" aria-label="Back to top">↑</button>
-
-  <!-- 🧩 Footer will be dynamically injected -->
-  <div id="footer-include"></div>
-
-  <!-- 🧠 Modular JS: entry point -->
-  <script type="module" src="assets/js/main.js"></script>
-
-  <!-- 🌙 Theme toggle -->
-  <button id="themeToggle" aria-label="Toggle theme" class="theme-toggle">🌙</button>
-
+<script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
