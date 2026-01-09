@@ -1,4 +1,5 @@
 // /assets/js/main.js
+import './styles/main.css';
 const root = document.documentElement;
 
 function setTheme(theme) {
