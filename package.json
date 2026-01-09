@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/DK-Digital-Designs/DK-Digital#readme",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "vite": "^7.3.1"
   }
 }
