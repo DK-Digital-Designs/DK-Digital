@@ -32,6 +32,18 @@ function getHtmlEntries() {
     });
   }
 
+  // Learn section in /pages/learn
+  const learnDir = resolve(__dirname, 'pages/learn');
+  if (fs.existsSync(learnDir)) {
+    const files = fs.readdirSync(learnDir);
+    files.forEach(file => {
+      if (file.endsWith('.html')) {
+        const name = `learn-${file.replace('.html', '')}`;
+        entries[name] = resolve(learnDir, file);
+      }
+    });
+  }
+
   return entries;
 }
 

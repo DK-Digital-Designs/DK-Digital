@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Why Custom Dashboards Matter — DK Digital</title>
+    <meta name="description"
+        content="Learn how custom internal dashboards can replace messy spreadsheets and scale your business operations." />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png" />
+    <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, system-ui, -apple-system, sans-serif
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>
+        <div style="padding: 12px 16px; background: #111; color: #fff; font-size: 14px">This site works best with
+            JavaScript enabled.</div>
+    </noscript>
+    <div id="progressBar" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../../index.html" aria-label="DK Digital home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span class="brand-text">DK Digital</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="primaryNav"
+                aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" id="primaryNav" aria-label="Primary">
+                <a href="../../index.html#services">Services</a>
+                <a href="../../index.html#process">Process</a>
+                <a href="../../index.html#work">Work</a>
+                <a href="../../index.html#pricing">Pricing</a>
+                <a href="../how-we-work.html">How we work</a>
+                <a href="../team.html">Team</a>
+                <a href="../../index.html#contact" class="nav-cta">Request a quote</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section reveal">
+            <div class="container">
+                <a href="../how-we-work.html" class="back-link">← Guidance Center</a>
+                <p class="eyebrow">Operations</p>
+                <h1>Beyond Spreadsheets: The Power of Custom Dashboards</h1>
+                <p class="lead">As your business grows, "managing by email" becomes a liability. Here is how custom
+                    internal tools provide the clarity you need to scale.</p>
+
+                <div class="prose">
+                    <h3>1. Centralized Truth</h3>
+                    <p>
+                        When data is scattered across emails, WhatsApp messages, and several different spreadsheets,
+                        mistakes happen. A custom dashboard provides a <strong>single source of truth</strong>. You see
+                        exactly who your customers are, what they've paid, and what tasks are outstanding in one view.
+                    </p>
+
+                    <h3>2. Operational Efficiency</h3>
+                    <p>
+                        Custom tools are built specifically for your workflow. Unlike generic software that forces you
+                        to change how you work, a custom dashboard is engineered to fit your existing processes
+                        perfectly. This removes "busy work" and lets your team focus on high-value tasks.
+                    </p>
+
+                    <h3>3. Role-Based Access</h3>
+                    <p>
+                        A spreadsheet is "all or nothing"—anyone with the link can see everything. A custom system
+                        allows for <strong>Secure Access</strong>. Your accountant sees the financials, your project
+                        manager sees the tasks, and your clients see only their own portal. This security is essential
+                        for professional ops.
+                    </p>
+
+                    <h3>4. Real-Time Insights</h3>
+                    <p>
+                        How many new leads did you get this week? What is your conversion rate? A dashboard calculates
+                        these metrics in real-time. You aren't guessing about the health of your business; you are
+                        making data-driven decisions based on live information.
+                    </p>
+
+                    <blockquote>
+                        "Scale is about systems. We help companies replace manual work with automated dashboards so they
+                        can grow without the chaos."
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Link -->
+        <section class="section section-alt reveal">
+            <div class="container">
+                <div class="philosophy-box">
+                    <h3>Is it time to level up?</h3>
+                    <p>Our <strong>Growth Plan</strong> and <strong>Scale Plan</strong> are designed specifically for
+                        businesses ready to move into custom systems and automated dashboards.</p>
+                    <div class="cta-actions" style="justify-content: center; margin-top: 1.5rem;">
+                        <a class="btn btn-primary" href="../how-we-work.html">View Advanced Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <div class="brand brand-footer">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <span class="brand-text">DK Digital</span>
+                </div>
+                <p class="muted">Helping businesses understand and own their web systems.</p>
+            </div>
+            <div class="footer-links" aria-label="Footer links">
+                <a href="../../index.html#services">Services</a>
+                <a href="../../index.html#work">Work</a>
+                <a href="../../index.html#pricing">Pricing</a>
+                <a href="../how-we-work.html">How we work</a>
+                <a href="../team.html">Team</a>
+                <a href="../../index.html#contact">Contact</a>
+            </div>
+            <div class="footer-right">
+                <p class="muted">© <span id="year"></span> DK Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../../src/main.js"></script>
+</body>
+
+</html>

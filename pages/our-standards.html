@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Standards — DK Digital Engineering</title>
+    <meta name="description"
+        content="Our internal engineering standards for performance, security, and maintainable systems." />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png" />
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, system-ui, -apple-system, sans-serif
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>
+        <div style="padding: 12px 16px; background: #111; color: #fff; font-size: 14px">This site works best with
+            JavaScript enabled.</div>
+    </noscript>
+    <div id="progressBar" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="DK Digital home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span class="brand-text">DK Digital</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="primaryNav"
+                aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" id="primaryNav" aria-label="Primary">
+                <a href="../index.html#services">Services</a>
+                <a href="../index.html#process">Process</a>
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#pricing">Pricing</a>
+                <div class="nav-item-dropdown">
+                    <a href="#" class="dropdown-toggle">Learn ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="learn/why-payment-portals.html">Why Payment Portals</a>
+                        <a href="learn/why-contact-forms.html">Why Contact Forms</a>
+                        <a href="learn/why-custom-dashboards.html">Why Dashboards</a>
+                        <a href="learn/why-seo-matters.html">Why SEO Matters</a>
+                    </div>
+                </div>
+                <a href="how-we-work.html">How we work</a>
+                <a href="team.html">Team</a>
+                <a href="../index.html#contact" class="nav-cta">Request a quote</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section reveal">
+            <div class="container">
+                <p class="eyebrow">Technical Integrity</p>
+                <h1>Our Engineering Standards</h1>
+                <p class="lead">We don't just "build sites"—we engineer technical assets. Here is the DNA of every
+                    project we deliver.</p>
+
+                <div class="prose">
+                    <h3>1. Performance Baseline</h3>
+                    <p>
+                        We believe speed is a feature. Every project must hit high scores on Core Web Vitals (LCP, FID,
+                        CLS). We achieve this by:
+                    </p>
+                    <ul class="bullets">
+                        <li><strong>Relative Paths:</strong> Ensuring portability and zero-broken-link deployments.</li>
+                        <li><strong>Image Optimization:</strong> Automated WebP conversion and lazy-loading.</li>
+                        <li><strong>No Bloat:</strong> Avoiding heavy frameworks for simple marketing needs.</li>
+                    </ul>
+
+                    <h3>2. Security by Default</h3>
+                    <p>
+                        Client and business data is sacred. We enforce:
+                    </p>
+                    <ul class="bullets">
+                        <li><strong>Supabase Auth & RLS:</strong> Enterprise-grade authentication and row-level
+                            security.</li>
+                        <li><strong>Environment Parity:</strong> Strict separation of development and production keys.
+                        </li>
+                        <li><strong>Sanitized Inputs:</strong> Zod-driven validation for all API interactions.</li>
+                    </ul>
+
+                    <h3>3. Clean Code Architecture</h3>
+                    <p>
+                        A codebase is a living asset. We ensure it scales by:
+                    </p>
+                    <ul class="bullets">
+                        <li><strong>Reusable Base Repos:</strong> Pre-wired skeletons for DB, Auth, and Templates.</li>
+                        <li><strong>Modular CSS:</strong> Using design tokens and utility classes for consistent UI.
+                        </li>
+                        <li><strong>Standardized Commits:</strong> Clear history for easy maintenance and collaboration.
+                        </li>
+                    </ul>
+
+                    <h3>4. Documentation & Handover</h3>
+                    <p>
+                        Ownership is key. When we hand over a project, you receive:
+                    </p>
+                    <ul class="bullets">
+                        <li><strong>Standard README:</strong> Clear instructions on how to run, build, and deploy.</li>
+                        <li><strong>Infrastructure Map:</strong> Summary of all 3rd-party services and keys.</li>
+                        <li><strong>Training:</strong> Detailed walkthroughs for any custom management consoles.</li>
+                    </ul>
+
+                    <blockquote>
+                        "We build systems that we are proud to show other engineers. That is the DK Digital standard."
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section section-cta reveal">
+            <div class="container cta-inner">
+                <h2>Want to build correctly?</h2>
+                <p>Let's talk about the technical architecture of your next business asset.</p>
+                <div class="cta-actions">
+                    <a class="btn btn-primary" href="../index.html#contact">Request a quote</a>
+                    <a class="btn btn-ghost" href="services-comparison.html">View our plans</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <div class="brand brand-footer">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <span class="brand-text">DK Digital</span>
+                </div>
+                <p class="muted">Precision engineering for the modern web.</p>
+            </div>
+            <div class="footer-links" aria-label="Footer links">
+                <a href="../index.html#services">Services</a>
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#pricing">Pricing</a>
+                <a href="how-we-work.html">How we work</a>
+                <a href="how-we-build.html">Process</a>
+                <a href="team.html">Team</a>
+                <a href="our-standards.html">Standards</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+            <div class="footer-right">
+                <p class="muted">© <span id="year"></span> DK Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../src/main.js"></script>
+</body>
+
+</html>

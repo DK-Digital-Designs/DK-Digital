@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Service Comparison & Pricing — DK Digital</title>
+    <meta name="description"
+        content="Detailed comparison of Launch, Growth, and Scale plans, including our hourly pricing philosophy." />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png" />
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, system-ui, -apple-system, sans-serif
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>
+        <div style="padding: 12px 16px; background: #111; color: #fff; font-size: 14px">This site works best with
+            JavaScript enabled.</div>
+    </noscript>
+    <!-- Scroll progress -->
+    <div id="progressBar" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="DK Digital home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span class="brand-text">DK Digital</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="primaryNav"
+                aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" id="primaryNav" aria-label="Primary">
+                <a href="../index.html#services">Services</a>
+                <a href="../index.html#process">Process</a>
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#pricing">Pricing</a>
+                <div class="nav-item-dropdown">
+                    <a href="#" class="dropdown-toggle">Learn ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="learn/why-payment-portals.html">Why Payment Portals</a>
+                        <a href="learn/why-contact-forms.html">Why Contact Forms</a>
+                        <a href="learn/why-custom-dashboards.html">Why Dashboards</a>
+                        <a href="learn/why-seo-matters.html">Why SEO Matters</a>
+                    </div>
+                </div>
+                <a href="how-we-work.html">How we work</a>
+                <a href="team.html">Team</a>
+                <a href="../index.html#contact" class="nav-cta">Request a quote</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="how-we-work-hero reveal">
+            <div class="container">
+                <p class="eyebrow">Clear & Transparent</p>
+                <h1>Pricing & Features</h1>
+                <p class="lead">A detailed breakdown of what goes into each tier. No hidden costs, just honest work.</p>
+            </div>
+        </section>
+
+        <!-- Decision Tree / Guide -->
+        <section class="section reveal">
+            <div class="container">
+                <div class="philosophy-box">
+                    <h3>Which path is right for you?</h3>
+                    <div class="prose">
+                        <p><strong>Choose Launch if:</strong> You need credibility, a professional face for your brand,
+                            or a high-converting landing page for ads.</p>
+                        <p><strong>Choose Growth if:</strong> You have customers logging in, need to manage data (admin
+                            panels), or run a membership business.</p>
+                        <p><strong>Choose Scale if:</strong> You have strict compliance needs, complex APIs, or need to
+                            integrate with legacy 3rd-party banking/logistics systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="section">
+            <div class="container">
+                <div class="comparison-table-wrapper reveal">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Launch</th>
+                                <th>Growth</th>
+                                <th>Scale</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="section-row">
+                                <td colspan="4">Technical Core</td>
+                            </tr>
+                            <tr>
+                                <td>Architecture</td>
+                                <td>Static (HTML/CSS)</td>
+                                <td>Dynamic (React/Vite)</td>
+                                <td>Microservices/Custom</td>
+                            </tr>
+                            <tr>
+                                <td>Database</td>
+                                <td>Not Included</td>
+                                <td>Supabase / SQL</td>
+                                <td>Custom / Dedicated</td>
+                            </tr>
+                            <tr>
+                                <td>User Auth</td>
+                                <td>-</td>
+                                <td>Included</td>
+                                <td>Advanced / SSO</td>
+                            </tr>
+
+                            <tr class="section-row">
+                                <td colspan="4">Performance & Growth</td>
+                            </tr>
+                            <tr>
+                                <td>SEO Setup</td>
+                                <td>Included</td>
+                                <td>Included</td>
+                                <td>Advanced</td>
+                            </tr>
+                            <tr>
+                                <td>CMS</td>
+                                <td>-</td>
+                                <td>Included</td>
+                                <td>Custom</td>
+                            </tr>
+                            <tr>
+                                <td>Analytics</td>
+                                <td>Basic</td>
+                                <td>Standard</td>
+                                <td>Advanced Tracking</td>
+                            </tr>
+
+                            <tr class="section-row">
+                                <td colspan="4">Estimated Investment</td>
+                            </tr>
+                            <tr>
+                                <td>Typical Timeline</td>
+                                <td>1–2 Weeks</td>
+                                <td>3–5 Weeks</td>
+                                <td>6+ Weeks</td>
+                            </tr>
+                            <tr>
+                                <td>Pricing Model</td>
+                                <td colspan="3" class="highlight-cell">Hourly Based Estimate (Transparent Quote)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Resources -->
+        <section class="section section-alt reveal">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem;">Deep Dive: Why These Features Matter</h2>
+                <div class="tier-grid">
+                    <a href="learn/why-payment-portals.html" class="tier-card">
+                        <span class="tier-tag">Payments</span>
+                        <h3>Payment Portals</h3>
+                        <p class="muted">Why moving away from manual bank transfers is the best thing for your cash
+                            flow.</p>
+                        <span style="color: var(--brand); font-weight: 500; margin-top: auto;">Read Article →</span>
+                    </a>
+                    <a href="learn/why-custom-dashboards.html" class="tier-card">
+                        <span class="tier-tag">Operations</span>
+                        <h3>Custom Dashboards</h3>
+                        <p class="muted">Stop managing your business from a spreadsheet. See how custom tools scale ops.
+                        </p>
+                        <span style="color: var(--brand); font-weight: 500; margin-top: auto;">Read Article →</span>
+                    </a>
+                    <a href="learn/why-seo-matters.html" class="tier-card">
+                        <span class="tier-tag">Growth</span>
+                        <h3>SEO Foundations</h3>
+                        <p class="muted">Technical SEO isn't magic. Learn why a fast, clean site wins more customers.
+                        </p>
+                        <span style="color: var(--brand); font-weight: 500; margin-top: auto;">Read Article →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section section-cta reveal">
+            <div class="container cta-inner">
+                <h2>Ready to start?</h2>
+                <p>We'll give you a clear, itemized quote before we write a single line of code.</p>
+                <div class="cta-actions">
+                    <a class="btn btn-primary" href="../index.html#contact">Request a quote</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <div class="brand brand-footer">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <span class="brand-text">DK Digital</span>
+                </div>
+                <p class="muted">Websites and systems that look great and work.</p>
+            </div>
+            <div class="footer-links" aria-label="Footer links">
+                <a href="../index.html#services">Services</a>
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#pricing">Pricing</a>
+                <a href="how-we-work.html">How we work</a>
+                <a href="how-we-build.html">Process</a>
+                <a href="team.html">Team</a>
+                <a href="our-standards.html">Standards</a>
+                <a href="learn/why-seo-matters.html">Learn</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+            <div class="footer-right">
+                <p class="muted">© <span id="year"></span> DK Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../src/main.js"></script>
+</body>
+
+</html>
