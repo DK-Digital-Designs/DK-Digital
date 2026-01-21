@@ -32,6 +32,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 
+
+
+
     <!-- Critical (tiny) -->
     <style>
         body {
@@ -643,13 +646,14 @@
                                 required></textarea>
                         </label>
 
-                        <!-- Replace with Formspree / Netlify Forms / your backend endpoint -->
-                        <button type="button" class="btn btn-primary" id="fakeSubmit">Send (wire up endpoint)</button>
+                        <!-- Bot Prevention -->
+                        <div class="vh">
+                            <label for="website_sync">Leave this field blank</label>
+                            <input type="text" name="website_sync" id="website_sync" tabindex="-1" autocomplete="off" />
+                        </div>
 
-                        <p class="form-hint muted">
-                            For a real submission: connect this form to Formspree/Netlify Forms or your own API
-                            endpoint.
-                        </p>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
 
                     <aside class="contact-side">
@@ -665,13 +669,14 @@
 
                         <div class="side-card">
                             <h3>Contact</h3>
-                            <p class="muted">Add your real details here:</p>
-                            <p><strong>Phone:</strong> <a href="tel:+27XXXXXXXXX">+27 XX XXX XXXX</a></p>
-                            <p><strong>Email:</strong> you@dkdigital.co.za</p>
+                            <p class="muted">Direct reach out:</p>
+                            <p><strong>Email:</strong> <a href="mailto:hello@dkdigital.co.za">hello@dkdigital.co.za</a>
+                            </p>
                             <p><strong>Location:</strong> South Africa</p>
                         </div>
                     </aside>
                 </div>
+            </div>
             </div>
         </section>
 

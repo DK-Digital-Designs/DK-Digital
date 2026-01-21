@@ -1459,14 +1459,17 @@ textarea {
     }
 }
 
-.quote {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    font-style: italic;
-    color: var(--text-muted);
-    position: relative;
-    padding-left: 1.5rem;
-    border-left: 3px solid var(--brand);
+/* Bot Prevention Utilities */
+.vh {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
 
 /* Work Card Image Links */
