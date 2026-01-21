@@ -1,5 +1,5 @@
-// /assets/js/main.js
 import './styles/main.css';
+import { initForms } from './scripts/forms';
 const root = document.documentElement;
 
 function setTheme(theme) {
@@ -106,12 +106,19 @@ function initFooterYear() {
     if (y) y.textContent = String(new Date().getFullYear());
 }
 
-function initFakeSubmit() {
-    const btn = document.getElementById("fakeSubmit");
-    if (!btn) return;
-    btn.addEventListener("click", () => {
-        alert("Wire this button to Formspree / Netlify Forms / your API endpoint.");
-    });
+
+
+function initScrollReveal() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -127,5 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initMobileNav();
     initTestimonials();
     initFooterYear();
-    initFakeSubmit();
+    initForms();
+    initScrollReveal();
 });

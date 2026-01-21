@@ -32,6 +32,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 
+
+
+
     <!-- Critical (tiny) -->
     <style>
         body {
@@ -72,12 +75,31 @@
             </button>
 
             <nav class="nav" id="primaryNav" aria-label="Primary">
-                <a href="#services">Services</a>
-                <a href="#process">Process</a>
-                <a href="#work">Work</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact" class="nav-cta">Request a quote</a>
+                <div class="nav-item-dropdown">
+                    <a href="#" class="dropdown-toggle">Projects ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/projects.html">All Projects</a>
+                        <a href="pages/projects/goalgetters.html">GoalGetters</a>
+                        <a href="pages/projects/nmd-advisory.html">NMD Advisory</a>
+                        <a href="pages/projects/veloire.html">VELOIRE</a>
+                        <a href="pages/projects/skiip.html">Skiip</a>
+                        <a href="pages/projects/kineticedge.html">Kinetic Edge</a>
+                        <a href="pages/projects/ascend-elite.html">Ascend Elite</a>
+                    </div>
+                </div>
+                <div class="nav-item-dropdown">
+                    <a href="#" class="dropdown-toggle">Learn ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/learn/why-payment-portals.html">Why Payment Portals</a>
+                        <a href="pages/learn/why-contact-forms.html">Why Contact Forms</a>
+                        <a href="pages/learn/why-custom-dashboards.html">Why Dashboards</a>
+                        <a href="pages/learn/why-seo-matters.html">Why SEO Matters</a>
+                    </div>
+                </div>
+                <a href="pages/how-we-work.html">How we work</a>
+                <a href="pages/our-standards.html">Our Standards</a>
+                <a href="pages/team.html">Team</a>
+                <a href="pages/contact.html" class="nav-cta">Contact</a>
             </nav>
 
             <div class="header-actions">
@@ -94,19 +116,16 @@
             <div class="hero-bg" aria-hidden="true"></div>
             <div class="container hero-inner">
                 <div class="hero-copy">
-                    <p class="eyebrow">Websites • Systems • Performance</p>
-                    <h1>Websites and systems for growing businesses—built properly.</h1>
+                    <p class="eyebrow">Engineering • Strategy • Impact</p>
+                    <h1>High-performance web systems engineered for business growth.</h1>
                     <p class="lead">
-                        Ultra Premium-quality design, fast performance, SEO + analytics included—without inflated agency
-                        pricing.
-                        We mainly serve small and medium companies, with the capability to deliver enterprise-grade work
-                        when required.
+                        We build technical assets that help small businesses automate, scale, and capture revenue.
+                        Transparent pricing, engineering excellence, and no digital debt.
                     </p>
-
-                    <div class="hero-cta">
-                        <a class="btn btn-primary" href="#contact">Request a quote</a>
-                        <a class="btn btn-ghost" href="tel:+27XXXXXXXXX">Call us</a>
-                        <a class="btn btn-ghost" href="#work">View work</a>
+                    <div class="hero-actions">
+                        <a href="pages/contact.html" class="btn btn-primary">Start a project</a>
+                        <a href="pages/services-comparison.html" class="btn btn-ghost">View our plans</a>
+                        <a class="btn btn-ghost" href="pages/projects.html">View work</a>
                     </div>
 
                     <div class="trust-row" aria-label="Highlights">
@@ -138,7 +157,7 @@
         </section>
 
         <!-- Services -->
-        <section id="services" class="section">
+        <section id="services" class="section reveal">
             <div class="container">
                 <div class="section-head">
                     <h2>Services</h2>
@@ -216,11 +235,12 @@
         </section>
 
         <!-- Process -->
-        <section id="process" class="section section-alt">
+        <section id="process" class="section section-alt reveal">
             <div class="container">
                 <div class="section-head">
                     <h2>Process</h2>
-                    <p>Fast, structured, and transparent from start to launch.</p>
+                    <p>Fast, structured, and transparent from start to launch. <a href="pages/how-we-work.html"
+                            class="learn-more-link">Learn about how we work →</a></p>
                 </div>
 
                 <div class="steps">
@@ -242,7 +262,47 @@
                     <div class="step">
                         <span class="step-num">04</span>
                         <h3>Launch</h3>
-                        <p>Domain, hosting, tracking, and final QA—then go live.</p>
+                        <p>Optimized artifacts deployed and ready for traffic.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us / Standards -->
+        <section class="section reveal">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Why Engineering Matters</h2>
+                    <p>We don't just "build websites." We engineer technical assets that work for your business.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="philosophy-box">
+                        <h3>Our Standards</h3>
+                        <div class="prose">
+                            <p>Every line of code we write follows strict internal standards for performance, security,
+                                and maintainability. We don't use bloated templates or cutting corners.</p>
+                            <ul class="bullets">
+                                <li><strong>Speed First:</strong> Optimized for Core Web Vitals from day one.</li>
+                                <li><strong>No Technical Debt:</strong> Clean, documented, and reusable code.</li>
+                                <li><strong>Business Focused:</strong> Every feature must drive a business outcome.</li>
+                            </ul>
+                            <a href="pages/our-standards.html" class="learn-more-link"
+                                style="margin-top: 1rem; display: inline-block;">View our Full Engineering Standards
+                                →</a>
+                        </div>
+                    </div>
+                    <div class="philosophy-box" style="background: var(--bg);">
+                        <h3>Direct Access</h3>
+                        <div class="prose">
+                            <p>You work directly with the engineers building your site. No account managers, no layers
+                                of bureaucracy, just clear technical communication and fast execution.</p>
+                            <ul class="bullets">
+                                <li><strong>Transparent Pricing:</strong> Detailed, itemized quotes.</li>
+                                <li><strong>Direct Slack/Email:</strong> Reach the builders directly.</li>
+                                <li><strong>Ownership:</strong> You own 100% of the code and assets.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -253,33 +313,137 @@
             <div class="container">
                 <div class="section-head">
                     <h2>Work</h2>
-                    <p>Examples of what we ship (replace images/links with your real projects).</p>
+                    <p>Examples of what we ship. Check out our free demo's for real clients.</p>
                 </div>
 
                 <div class="work-grid">
-                    <a class="work-card" href="#" aria-label="Case study 1">
-                        <img src="images/work-1.jpg" alt="Project preview 1" loading="lazy" />
-                        <div class="work-meta">
-                            <h3>Premium Landing Page</h3>
-                            <p>Lead capture • Fast load • Clean UI</p>
+                    <article class="work-card reveal">
+                        <a href="pages/projects/goalgetters.html">
+                            <img src="images/work-1.jpg" alt="GoalGetters website" loading="lazy" />
+                        </a>
+                        <div class="work-content">
+                            <h3>GoalGetters</h3>
+                            <p>Community & motivation platform.</p>
+                            <a href="pages/projects/goalgetters.html" class="work-link">View Case Study →</a>
                         </div>
-                    </a>
+                    </article>
+                    <article class="work-card reveal" style="transition-delay: 0.1s">
+                        <a href="pages/projects/nmd-advisory.html">
+                            <img src="images/work-2.jpg" alt="NMD Advisory website" loading="lazy" />
+                        </a>
+                        <div class="work-content">
+                            <h3>NMD Advisory</h3>
+                            <p>Financial strategy & advisory.</p>
+                            <a href="pages/projects/nmd-advisory.html" class="work-link">View Case Study →</a>
+                        </div>
+                    </article>
+                    <article class="work-card reveal" style="transition-delay: 0.2s">
+                        <a href="pages/projects/veloire.html">
+                            <img src="images/work-3.jpg" alt="VELOIRE website" loading="lazy" />
+                        </a>
+                        <div class="work-content">
+                            <h3>VELOIRE</h3>
+                            <p>Premium fashion e-commerce.</p>
+                            <a href="pages/projects/veloire.html" class="work-link">View Case Study →</a>
+                        </div>
+                    </article>
+                    <article class="work-card reveal" style="transition-delay: 0.3s">
+                        <a href="pages/projects/kineticedge.html">
+                            <img src="images/work-4.jpg" alt="Kinetic Edge website" loading="lazy" />
+                        </a>
+                        <div class="work-content">
+                            <h3>Kinetic Edge</h3>
+                            <p>Sports performance & data.</p>
+                            <a href="pages/projects/kineticedge.html" class="work-link">View Case Study →</a>
+                        </div>
+                    </article>
+                    <article class="work-card reveal" style="transition-delay: 0.4s">
+                        <a href="pages/projects/skiip.html">
+                            <img src="images/work-5.jpg" alt="Skiip website" loading="lazy" />
+                        </a>
+                        <div class="work-content">
+                            <h3>Skiip</h3>
+                            <p>Logistics & queue tracking.</p>
+                            <a href="pages/projects/skiip.html" class="work-link">View Case Study →</a>
+                        </div>
+                    </article>
+                    <article class="work-card reveal" style="transition-delay: 0.5s">
+                        <a href="pages/projects/ascend-elite.html">
+                            <img src="images/work-5.jpg" alt="Ascend Elite website" loading="lazy" />
+                        </a>
+                        <div class="work-content">
+                            <h3>Ascend Elite</h3>
+                            <p>Modern lifestyle sportswear.</p>
+                            <a href="pages/projects/ascend-elite.html" class="work-link">View Case Study →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                    <a class="work-card" href="#" aria-label="Case study 2">
-                        <img src="images/work-2.jpg" alt="Project preview 2" loading="lazy" />
-                        <div class="work-meta">
-                            <h3>Business Website</h3>
-                            <p>Multi-page • SEO-ready • Mobile-first</p>
+        <!-- Team -->
+        <section id="team" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>The Founders</h2>
+                    <p>Meet the team behind the vision of DK Digital.</p>
+                </div>
+                <div class="team-grid">
+                    <article class="team-card reveal">
+                        <div class="team-image">
+                            <img src="images/dean.png" alt="Dean" loading="lazy" />
                         </div>
-                    </a>
+                        <div class="team-info">
+                            <span class="role">Founder & Lead Dev</span>
+                            <h3>Dean</h3>
+                            <p class="bio">Passionate about building high-performance systems and clean user interfaces.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="team-card reveal" style="transition-delay: 0.1s">
+                        <div class="team-image">
+                            <img src="images/khaya.png" alt="Khaya" loading="lazy" />
+                        </div>
+                        <div class="team-info">
+                            <span class="role">Founder & Strategist</span>
+                            <h3>Khaya</h3>
+                            <p class="bio">Focused on user-centric strategy and business growth for every project.</p>
+                        </div>
+                    </article>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="pages/team.html" class="btn btn-ghost">Meet the full team →</a>
+                </div>
+            </div>
+        </section>
 
-                    <a class="work-card" href="#" aria-label="Case study 3">
-                        <img src="images/work-3.jpg" alt="Project preview 3" loading="lazy" />
-                        <div class="work-meta">
-                            <h3>Admin + Workflow</h3>
-                            <p>Approvals • Dashboard • Roles</p>
+        <!-- Testimonials -->
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Client Impact</h2>
+                    <p>What our partners say about the technical assets we've built for them.</p>
+                </div>
+
+                <div class="grid-2">
+                    <article class="philosophy-box" style="background: var(--bg-alt);">
+                        <p class="quote">"DK Digital didn't just build us a website; they built a system. Our site loads
+                            in under a second and our lead capture has never been more efficient."</p>
+                        <div class="testimonial-meta"
+                            style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                            <div style="font-weight: 700;">Sarah M.</div>
+                            <div class="muted" style="font-size: 0.9rem;">Founder, GoalGetters</div>
                         </div>
-                    </a>
+                    </article>
+                    <article class="philosophy-box" style="background: var(--bg-alt);">
+                        <p class="quote">"The level of technical transparency was refreshing. No jargon, just results.
+                            They delivered a high-performance site that reflects our professional status."</p>
+                        <div class="testimonial-meta"
+                            style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                            <div style="font-weight: 700;">David L.</div>
+                            <div class="muted" style="font-size: 0.9rem;">Partner, NMD Advisory</div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -289,52 +453,71 @@
             <div class="container">
                 <div class="section-head">
                     <h2>Pricing</h2>
-                    <p>Three clear tiers. Every build includes SEO, performance and analytics.</p>
+                    <p>Time-based packages. Every build includes baseline SEO, performance and analytics.</p>
+                </div>
+
+                <!-- NOTE: Hour-based disclaimer -->
+                <div class="pricing-note" role="note" aria-label="Pricing note">
+                    <p class="muted">
+                        <strong>Hour-based pricing:</strong> Packages are estimates. Final cost is based on actual hours
+                        worked.
+                        If the work takes fewer hours, you pay less; if it takes more, you may be billed for the extra
+                        time.
+                        Any overage is confirmed with you before additional work continues.
+                    </p>
+                    <p style="margin-top: 1rem; font-weight: 500;">
+                        We offer both <strong>Guided Setup</strong> and <strong>Fully Managed</strong> options.
+                        <a href="pages/how-we-work.html" style="color:var(--brand); text-decoration: underline;">Learn
+                            more
+                            about how we work</a>.
+                    </p>
                 </div>
 
                 <div class="pricing">
                     <article class="price-card">
-                        <h3>Brochure</h3>
+                        <h3>Launch (10 hours)</h3>
                         <p class="price">From R2,000</p>
-                        <p class="muted">A clean info website—no technical add-ons.</p>
+                        <p class="muted">Best for a tight, clean info site or landing page.</p>
                         <ul>
-                            <li>Up to 4 pages</li>
-                            <li>Mobile-first design</li>
-                            <li>SEO setup + performance pass</li>
-                            <li>Analytics (GA4)</li>
+                            <li>Up to ~10 hours of build time</li>
+                            <li>Static Architecture (Fast & Secure)</li>
+                            <li>SEO & Analytics Baseline</li>
+                            <li>Contact Form Integration</li>
                         </ul>
-                        <a class="btn btn-ghost" href="#contact">Request a Brochure quote</a>
+                        <a class="btn btn-ghost" href="pages/contact.html">Request a 10-hour quote</a>
                     </article>
 
                     <article class="price-card featured">
                         <div class="badge">Most popular</div>
-                        <h3>Growth</h3>
+                        <h3>Growth (20 hours)</h3>
                         <p class="price">From R4,000</p>
-                        <p class="muted">Website + light systems to save you time.</p>
+                        <p class="muted">More pages + forms and light automation.</p>
                         <ul>
-                            <li>Up to 8 pages</li>
-                            <li>Forms + workflows (quotes/booking requests)</li>
-                            <li>SEO + performance + analytics</li>
-                            <li>Optional monthly care</li>
+                            <li>Up to ~20 hours of build time</li>
+                            <li>Auth + Database Integration</li>
+                            <li>Client Portals & Dashboards</li>
+                            <li>CMS for content management</li>
                         </ul>
-                        <a class="btn btn-primary" href="#contact">Request a Growth quote</a>
+                        <a class="btn btn-primary" href="pages/contact.html">Request a 20-hour quote</a>
                     </article>
 
                     <article class="price-card">
-                        <h3>Custom</h3>
-                        <p class="price">R10,000+</p>
-                        <p class="muted">Custom features, dashboards, backend, e-commerce.</p>
+                        <h3>Scale (40+ hours)</h3>
+                        <p class="price">R8,000+</p>
+                        <p class="muted">Enterprise-grade solutions for complex systems.</p>
                         <ul>
-                            <li>Database + roles</li>
-                            <li>Dashboards / admin panels</li>
-                            <li>Integrations + APIs</li>
-                            <li>Scoped timeline + support</li>
+                            <li>40+ hours (scoped estimate)</li>
+                            <li>Custom Microservices & APIs</li>
+                            <li>High Compliance & Security</li>
+                            <li>Advanced Scalability</li>
+                            <li>SLA & Dedicated Support</li>
                         </ul>
-                        <a class="btn btn-ghost" href="#contact">Request a Custom quote</a>
+                        <a class="btn btn-ghost" href="pages/contact.html">Request a Scale quote</a>
                     </article>
                 </div>
             </div>
         </section>
+
 
         <!-- Testimonials -->
         <section id="testimonials" class="section">
@@ -399,6 +582,9 @@
                     <details>
                         <summary>Do you help with hosting and domains?</summary>
                         <p>Yes. We can guide you to the right option and help you get everything connected correctly.
+                            Check our <a href="pages/how-we-work.html"
+                                style="color:var(--brand-2); text-decoration:underline;">How we work</a> page for a
+                            detailed breakdown of our Guided vs Fully Managed options.
                         </p>
                     </details>
                     <details>
@@ -406,6 +592,18 @@
                         <p>Yes. We mainly focus on small and medium businesses, but we can deliver enterprise-grade work
                             when required.</p>
                     </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section section-cta reveal">
+            <div class="container cta-inner">
+                <h2>Ready to build something properly?</h2>
+                <p>Let's turn your vision into a premium digital experience. Fast, SEO-ready, and built to scale.</p>
+                <div class="cta-actions">
+                    <a class="btn btn-primary" href="#contact">Get a free quote</a>
+                    <a class="btn btn-ghost" href="tel:+27XXXXXXXXX">Call us</a>
                 </div>
             </div>
         </section>
@@ -448,13 +646,14 @@
                                 required></textarea>
                         </label>
 
-                        <!-- Replace with Formspree / Netlify Forms / your backend endpoint -->
-                        <button type="button" class="btn btn-primary" id="fakeSubmit">Send (wire up endpoint)</button>
+                        <!-- Bot Prevention -->
+                        <div class="vh">
+                            <label for="website_sync">Leave this field blank</label>
+                            <input type="text" name="website_sync" id="website_sync" tabindex="-1" autocomplete="off" />
+                        </div>
 
-                        <p class="form-hint muted">
-                            For a real submission: connect this form to Formspree/Netlify Forms or your own API
-                            endpoint.
-                        </p>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
 
                     <aside class="contact-side">
@@ -470,13 +669,14 @@
 
                         <div class="side-card">
                             <h3>Contact</h3>
-                            <p class="muted">Add your real details here:</p>
-                            <p><strong>Phone:</strong> <a href="tel:+27XXXXXXXXX">+27 XX XXX XXXX</a></p>
-                            <p><strong>Email:</strong> you@dkdigital.co.za</p>
+                            <p class="muted">Direct reach out:</p>
+                            <p><strong>Email:</strong> <a href="mailto:hello@dkdigital.co.za">hello@dkdigital.co.za</a>
+                            </p>
                             <p><strong>Location:</strong> South Africa</p>
                         </div>
                     </aside>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -497,9 +697,13 @@
 
             <div class="footer-links" aria-label="Footer links">
                 <a href="#services">Services</a>
-                <a href="#work">Work</a>
+                <a href="pages/projects.html">Work</a>
                 <a href="#pricing">Pricing</a>
-                <a href="#contact">Contact</a>
+                <a href="pages/how-we-work.html">How we work</a>
+                <a href="pages/team.html">Team</a>
+                <a href="pages/our-standards.html">Standards</a>
+                <a href="pages/learn/why-seo-matters.html">Learn</a>
+                <a href="pages/contact.html">Contact</a>
             </div>
 
             <div class="footer-right">
