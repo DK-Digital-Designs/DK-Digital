@@ -72,10 +72,18 @@
             </button>
 
             <nav class="nav" id="primaryNav" aria-label="Primary">
-                <a href="#services">Services</a>
-                <a href="#process">Process</a>
-                <a href="#work">Work</a>
-                <a href="#pricing">Pricing</a>
+                <div class="nav-item-dropdown">
+                    <a href="#" class="dropdown-toggle">Projects ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/projects.html">All Projects</a>
+                        <a href="pages/projects/goalgetters.html">GoalGetters</a>
+                        <a href="pages/projects/nmd-advisory.html">NMD Advisory</a>
+                        <a href="pages/projects/veloire.html">VELOIRE</a>
+                        <a href="pages/projects/skiip.html">Skiip</a>
+                        <a href="pages/projects/kineticedge.html">Kinetic Edge</a>
+                        <a href="pages/projects/ascend-elite.html">Ascend Elite</a>
+                    </div>
+                </div>
                 <div class="nav-item-dropdown">
                     <a href="#" class="dropdown-toggle">Learn ▾</a>
                     <div class="dropdown-menu">
@@ -86,8 +94,9 @@
                     </div>
                 </div>
                 <a href="pages/how-we-work.html">How we work</a>
+                <a href="pages/our-standards.html">Our Standards</a>
                 <a href="pages/team.html">Team</a>
-                <a href="#contact" class="nav-cta">Request a quote</a>
+                <a href="pages/contact.html" class="nav-cta">Contact</a>
             </nav>
 
             <div class="header-actions">
@@ -111,9 +120,9 @@
                         Transparent pricing, engineering excellence, and no digital debt.
                     </p>
                     <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary">Start a project</a>
+                        <a href="pages/contact.html" class="btn btn-primary">Start a project</a>
                         <a href="pages/services-comparison.html" class="btn btn-ghost">View our plans</a>
-                        <a class="btn btn-ghost" href="#work">View work</a>
+                        <a class="btn btn-ghost" href="pages/projects.html">View work</a>
                     </div>
 
                     <div class="trust-row" aria-label="Highlights">
@@ -227,8 +236,8 @@
             <div class="container">
                 <div class="section-head">
                     <h2>Process</h2>
-                    <p>Fast, structured, and transparent from start to launch. <a href="pages/how-we-build.html"
-                            class="learn-more-link">Learn about our technical workflow →</a></p>
+                    <p>Fast, structured, and transparent from start to launch. <a href="pages/how-we-work.html"
+                            class="learn-more-link">Learn about how we work →</a></p>
                 </div>
 
                 <div class="steps">
@@ -306,7 +315,9 @@
 
                 <div class="work-grid">
                     <article class="work-card reveal">
-                        <img src="images/work-1.jpg" alt="GoalGetters website" loading="lazy" />
+                        <a href="pages/projects/goalgetters.html">
+                            <img src="images/work-1.jpg" alt="GoalGetters website" loading="lazy" />
+                        </a>
                         <div class="work-content">
                             <h3>GoalGetters</h3>
                             <p>Community & motivation platform.</p>
@@ -314,7 +325,9 @@
                         </div>
                     </article>
                     <article class="work-card reveal" style="transition-delay: 0.1s">
-                        <img src="images/work-2.jpg" alt="NMD Advisory website" loading="lazy" />
+                        <a href="pages/projects/nmd-advisory.html">
+                            <img src="images/work-2.jpg" alt="NMD Advisory website" loading="lazy" />
+                        </a>
                         <div class="work-content">
                             <h3>NMD Advisory</h3>
                             <p>Financial strategy & advisory.</p>
@@ -322,7 +335,9 @@
                         </div>
                     </article>
                     <article class="work-card reveal" style="transition-delay: 0.2s">
-                        <img src="images/work-3.jpg" alt="VELOIRE website" loading="lazy" />
+                        <a href="pages/projects/veloire.html">
+                            <img src="images/work-3.jpg" alt="VELOIRE website" loading="lazy" />
+                        </a>
                         <div class="work-content">
                             <h3>VELOIRE</h3>
                             <p>Premium fashion e-commerce.</p>
@@ -330,7 +345,9 @@
                         </div>
                     </article>
                     <article class="work-card reveal" style="transition-delay: 0.3s">
-                        <img src="images/work-4.jpg" alt="Kinetic Edge website" loading="lazy" />
+                        <a href="pages/projects/kineticedge.html">
+                            <img src="images/work-4.jpg" alt="Kinetic Edge website" loading="lazy" />
+                        </a>
                         <div class="work-content">
                             <h3>Kinetic Edge</h3>
                             <p>Sports performance & data.</p>
@@ -338,7 +355,9 @@
                         </div>
                     </article>
                     <article class="work-card reveal" style="transition-delay: 0.4s">
-                        <img src="images/work-5.jpg" alt="Skiip website" loading="lazy" />
+                        <a href="pages/projects/skiip.html">
+                            <img src="images/work-5.jpg" alt="Skiip website" loading="lazy" />
+                        </a>
                         <div class="work-content">
                             <h3>Skiip</h3>
                             <p>Logistics & queue tracking.</p>
@@ -346,7 +365,9 @@
                         </div>
                     </article>
                     <article class="work-card reveal" style="transition-delay: 0.5s">
-                        <img src="images/work-5.jpg" alt="Ascend Elite website" loading="lazy" />
+                        <a href="pages/projects/ascend-elite.html">
+                            <img src="images/work-5.jpg" alt="Ascend Elite website" loading="lazy" />
+                        </a>
                         <div class="work-content">
                             <h3>Ascend Elite</h3>
                             <p>Modern lifestyle sportswear.</p>
@@ -451,16 +472,16 @@
 
                 <div class="pricing">
                     <article class="price-card">
-                        <h3>Starter (10 hours)</h3>
+                        <h3>Launch (10 hours)</h3>
                         <p class="price">From R2,000</p>
                         <p class="muted">Best for a tight, clean info site or landing page.</p>
                         <ul>
                             <li>Up to ~10 hours of build time</li>
-                            <li>Mobile-first layout</li>
-                            <li>Basic SEO setup + performance pass</li>
-                            <li>Analytics (GA4) + conversion event tracking (basic)</li>
+                            <li>Static Architecture (Fast & Secure)</li>
+                            <li>SEO & Analytics Baseline</li>
+                            <li>Contact Form Integration</li>
                         </ul>
-                        <a class="btn btn-ghost" href="#contact">Request a 10-hour quote</a>
+                        <a class="btn btn-ghost" href="pages/contact.html">Request a 10-hour quote</a>
                     </article>
 
                     <article class="price-card featured">
@@ -470,24 +491,25 @@
                         <p class="muted">More pages + forms and light automation.</p>
                         <ul>
                             <li>Up to ~20 hours of build time</li>
-                            <li>Multiple pages + polished sections</li>
-                            <li>Forms + workflows (quote/booking requests)</li>
-                            <li>SEO + performance + analytics</li>
+                            <li>Auth + Database Integration</li>
+                            <li>Client Portals & Dashboards</li>
+                            <li>CMS for content management</li>
                         </ul>
-                        <a class="btn btn-primary" href="#contact">Request a 20-hour quote</a>
+                        <a class="btn btn-primary" href="pages/contact.html">Request a 20-hour quote</a>
                     </article>
 
                     <article class="price-card">
-                        <h3>Custom (20+ hours)</h3>
-                        <p class="price">R10,000+</p>
-                        <p class="muted">Custom features, dashboards, backend, e-commerce.</p>
+                        <h3>Scale (40+ hours)</h3>
+                        <p class="price">R8,000+</p>
+                        <p class="muted">Enterprise-grade solutions for complex systems.</p>
                         <ul>
-                            <li>20+ hours (scoped estimate)</li>
-                            <li>Database + roles / admin panels</li>
-                            <li>Integrations + APIs</li>
-                            <li>Scoped timeline + support options</li>
+                            <li>40+ hours (scoped estimate)</li>
+                            <li>Custom Microservices & APIs</li>
+                            <li>High Compliance & Security</li>
+                            <li>Advanced Scalability</li>
+                            <li>SLA & Dedicated Support</li>
                         </ul>
-                        <a class="btn btn-ghost" href="#contact">Request a Custom quote</a>
+                        <a class="btn btn-ghost" href="pages/contact.html">Request a Scale quote</a>
                     </article>
                 </div>
             </div>
@@ -670,14 +692,13 @@
 
             <div class="footer-links" aria-label="Footer links">
                 <a href="#services">Services</a>
-                <a href="#work">Work</a>
+                <a href="pages/projects.html">Work</a>
                 <a href="#pricing">Pricing</a>
                 <a href="pages/how-we-work.html">How we work</a>
-                <a href="pages/how-we-build.html">Process</a>
                 <a href="pages/team.html">Team</a>
                 <a href="pages/our-standards.html">Standards</a>
                 <a href="pages/learn/why-seo-matters.html">Learn</a>
-                <a href="#contact">Contact</a>
+                <a href="pages/contact.html">Contact</a>
             </div>
 
             <div class="footer-right">

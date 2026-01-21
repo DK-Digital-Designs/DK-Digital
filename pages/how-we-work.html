@@ -49,10 +49,18 @@
             </button>
 
             <nav class="nav" id="primaryNav" aria-label="Primary">
-                <a href="../index.html#services">Services</a>
-                <a href="../index.html#process">Process</a>
-                <a href="../index.html#work">Work</a>
-                <a href="../index.html#pricing">Pricing</a>
+                <div class="nav-item-dropdown">
+                    <a href="#" class="dropdown-toggle">Projects ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="projects.html">All Projects</a>
+                        <a href="projects/goalgetters.html">GoalGetters</a>
+                        <a href="projects/nmd-advisory.html">NMD Advisory</a>
+                        <a href="projects/veloire.html">VELOIRE</a>
+                        <a href="projects/skiip.html">Skiip</a>
+                        <a href="projects/kineticedge.html">Kinetic Edge</a>
+                        <a href="projects/ascend-elite.html">Ascend Elite</a>
+                    </div>
+                </div>
                 <div class="nav-item-dropdown">
                     <a href="#" class="dropdown-toggle">Learn ▾</a>
                     <div class="dropdown-menu">
@@ -63,8 +71,9 @@
                     </div>
                 </div>
                 <a href="how-we-work.html" class="active">How we work</a>
+                <a href="our-standards.html">Standards</a>
                 <a href="team.html">Team</a>
-                <a href="../index.html#contact" class="nav-cta">Request a quote</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
             </nav>
 
             <div class="header-actions">
@@ -206,7 +215,57 @@
             </div>
         </section>
 
-        <!-- Handover Pack -->
+        <!-- Process / How We Build -->
+        <section class="section section-alt reveal">
+            <div class="container">
+                <div class="section-head">
+                    <h2>The Engineering Process</h2>
+                    <p>How we take an idea from discovery to a high-performance production asset.</p>
+                </div>
+                <div class="grid-2" style="margin-top: 3rem; gap: 4rem;">
+                    <div class="prose">
+                        <h3>1. The Blueprint Phase</h3>
+                        <p>We start every project with a <strong>System Blueprint</strong>. This isn't just a design
+                            mockup; it's a technical map of how data flows, where the bottlenecks are, and exactly what
+                            technologies will be used.</p>
+                        <ul class="bullets">
+                            <li>Data Modeling (SQL / Supabase)</li>
+                            <li>UX Mapping & Wireframing</li>
+                            <li>API Integration Planning</li>
+                        </ul>
+
+                        <h3>2. Atomic Development</h3>
+                        <p>We build in iterations. Instead of waiting weeks to see progress, you get a "Live
+                            Development" link. You watch the site grow section by section, component by component.</p>
+                        <ul class="bullets">
+                            <li>Mobile-First Implementation</li>
+                            <li>Component-Based CSS Architecture</li>
+                            <li>Interactive State Management</li>
+                        </ul>
+                    </div>
+
+                    <div class="prose">
+                        <h3>3. The Quality Gate</h3>
+                        <p>Before any code goes live, it passes through our internal <strong>Engineering
+                                Standards</strong>. We don't ship "minimum viable"—we ship "production ready."</p>
+                        <ul class="bullets">
+                            <li>Automated Core Web Vitals Audit</li>
+                            <li>Cross-Browser & Device Testing</li>
+                            <li>Security Vulnerability Scanning</li>
+                        </ul>
+
+                        <h3>4. Final Handover</h3>
+                        <p>Once live, we ensure you have full control. No proprietary locks, no "hostage" code. You own
+                            everything.</p>
+                        <ul class="bullets">
+                            <li>100% Code Ownership</li>
+                            <li>Admin Dashboard Training</li>
+                            <li>Performance Monitoring Setup</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="section section-alt reveal">
             <div class="container">
                 <div class="handover-layout">
@@ -252,7 +311,7 @@
                 <h2>Unsure which tier fits you?</h2>
                 <p>Most clients start with a conversation. Let's chat about what you actually need.</p>
                 <div class="cta-actions">
-                    <a class="btn btn-primary" href="../index.html#contact">Get a free quote</a>
+                    <a class="btn btn-primary" href="contact.html">Get a free quote</a>
                     <a class="btn btn-ghost" href="mailto:hello@dkdigital.com">Email us</a>
                 </div>
             </div>
@@ -271,14 +330,13 @@
             </div>
             <div class="footer-links" aria-label="Footer links">
                 <a href="../index.html#services">Services</a>
-                <a href="../index.html#work">Work</a>
+                <a href="projects.html">Work</a>
                 <a href="../index.html#pricing">Pricing</a>
                 <a href="how-we-work.html">How we work</a>
-                <a href="how-we-build.html">Process</a>
                 <a href="team.html">Team</a>
                 <a href="our-standards.html">Standards</a>
                 <a href="learn/why-seo-matters.html">Learn</a>
-                <a href="../index.html#contact">Contact</a>
+                <a href="contact.html">Contact</a>
             </div>
             <div class="footer-right">
                 <p class="muted">© <span id="year"></span> DK Digital</p>
