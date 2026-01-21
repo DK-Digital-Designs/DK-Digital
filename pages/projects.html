@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Projects — DK Digital</title>
+    <meta name="description"
+        content="Browse our portfolio of high-performance web applications, e-commerce platforms, and custom business systems." />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png" />
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, system-ui, -apple-system, sans-serif
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover {
+            background: var(--surface);
+            border-color: var(--brand);
+        }
+
+        .filter-btn.active {
+            background: var(--brand);
+            color: white;
+            border-color: var(--brand);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--surface);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid var(--border);
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card.hidden {
+            display: none;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: var(--bg-alt);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .project-tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            background: var(--bg-alt);
+            border-radius: 12px;
+            color: var(--text-muted);
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            color: var(--text);
+            min-width: 80px;
+        }
+    </style>
+  <script type="module" crossorigin src="../assets/main-BDnyfAlZ.js"></script>
+  <link rel="stylesheet" crossorigin href="../assets/main-CF7fD3NH.css">
+</head>
+
+<body>
+    <noscript>
+        <div style="padding: 12px 16px; background: #111; color: #fff; font-size: 14px">This site works best with
+            JavaScript enabled.</div>
+    </noscript>
+    <div id="progressBar" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="DK Digital home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span class="brand-text">DK Digital</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="primaryNav"
+                aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" id="primaryNav" aria-label="Primary">
+                <div class="nav-item-dropdown">
+                    <a href="#" class="dropdown-toggle active">Projects ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="projects.html" class="active">All Projects</a>
+                        <a href="projects/goalgetters.html">GoalGetters</a>
+                        <a href="projects/nmd-advisory.html">NMD Advisory</a>
+                        <a href="projects/veloire.html">VELOIRE</a>
+                        <a href="projects/skiip.html">Skiip</a>
+                        <a href="projects/kineticedge.html">Kinetic Edge</a>
+                        <a href="projects/ascend-elite.html">Ascend Elite</a>
+                    </div>
+                </div>
+                <div class="nav-item-dropdown">
+                    <a href="#" class="dropdown-toggle">Learn ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="learn/why-payment-portals.html">Why Payment Portals</a>
+                        <a href="learn/why-contact-forms.html">Why Contact Forms</a>
+                        <a href="learn/why-custom-dashboards.html">Why Dashboards</a>
+                        <a href="learn/why-seo-matters.html">Why SEO Matters</a>
+                    </div>
+                </div>
+                <a href="how-we-work.html">How we work</a>
+                <a href="our-standards.html">Our Standards</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section reveal">
+            <div class="container">
+                <p class="eyebrow">Portfolio</p>
+                <h1>Our Projects</h1>
+                <p class="lead">A selection of high-performance web applications, e-commerce platforms, and business
+                    systems we've engineered.</p>
+
+                <!-- Filter Bar -->
+                <div class="filter-bar">
+                    <span class="filter-label">Category:</span>
+                    <div class="filter-group" id="categoryFilters">
+                        <button class="filter-btn active" data-filter="all" data-type="category">All</button>
+                        <button class="filter-btn" data-filter="ecommerce" data-type="category">E-Commerce</button>
+                        <button class="filter-btn" data-filter="fitness" data-type="category">Fitness</button>
+                        <button class="filter-btn" data-filter="services" data-type="category">Services</button>
+                        <button class="filter-btn" data-filter="logistics" data-type="category">Logistics</button>
+                    </div>
+                </div>
+
+                <div class="filter-bar" style="margin-top: 1rem;">
+                    <span class="filter-label">Stack:</span>
+                    <div class="filter-group" id="stackFilters">
+                        <button class="filter-btn active" data-filter="all" data-type="stack">All</button>
+                        <button class="filter-btn" data-filter="vite" data-type="stack">Vite</button>
+                        <button class="filter-btn" data-filter="supabase" data-type="stack">Supabase</button>
+                        <button class="filter-btn" data-filter="vanilla-js" data-type="stack">Vanilla JS</button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- GoalGetters -->
+                    <article class="project-card" data-category="fitness" data-stack="vite vanilla-js">
+                        <img src="../images/work-1.jpg" alt="GoalGetters" class="project-image" />
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Fitness</span>
+                                <span class="project-tag">Vite</span>
+                            </div>
+                            <h3 class="project-title">GoalGetters</h3>
+                            <p class="project-desc">Goal tracking and motivation platform with real-time progress
+                                visualization.</p>
+                            <a href="projects/goalgetters.html" class="btn btn-ghost">View Case Study →</a>
+                        </div>
+                    </article>
+
+                    <!-- NMD Advisory -->
+                    <article class="project-card" data-category="services" data-stack="vite vanilla-js">
+                        <img src="../images/work-2.jpg" alt="NMD Advisory" class="project-image" />
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Services</span>
+                                <span class="project-tag">Vite</span>
+                            </div>
+                            <h3 class="project-title">NMD Advisory</h3>
+                            <p class="project-desc">Professional financial consulting website with trust-first design.
+                            </p>
+                            <a href="projects/nmd-advisory.html" class="btn btn-ghost">View Case Study →</a>
+                        </div>
+                    </article>
+
+                    <!-- VELOIRE -->
+                    <article class="project-card" data-category="ecommerce" data-stack="vite vanilla-js">
+                        <img src="../images/work-3.jpg" alt="VELOIRE" class="project-image" />
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">E-Commerce</span>
+                                <span class="project-tag">Luxury</span>
+                            </div>
+                            <h3 class="project-title">VELOIRE</h3>
+                            <p class="project-desc">High-end fashion e-commerce platform with glassmorphism UI.</p>
+                            <a href="projects/veloire.html" class="btn btn-ghost">View Case Study →</a>
+                        </div>
+                    </article>
+
+                    <!-- Kinetic Edge -->
+                    <article class="project-card" data-category="fitness services" data-stack="vite vanilla-js">
+                        <img src="../images/work-4.jpg" alt="Kinetic Edge" class="project-image" />
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Fitness</span>
+                                <span class="project-tag">Performance</span>
+                            </div>
+                            <h3 class="project-title">Kinetic Edge Performance</h3>
+                            <p class="project-desc">Sports performance and injury prevention platform for elite
+                                athletes.</p>
+                            <a href="projects/kineticedge.html" class="btn btn-ghost">View Case Study →</a>
+                        </div>
+                    </article>
+
+                    <!-- Ascend Elite -->
+                    <article class="project-card" data-category="ecommerce" data-stack="vite vanilla-js">
+                        <img src="../images/work-5.jpg" alt="Ascend Elite" class="project-image" />
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">E-Commerce</span>
+                                <span class="project-tag">Apparel</span>
+                            </div>
+                            <h3 class="project-title">Ascend Elite Apparel</h3>
+                            <p class="project-desc">Modern sportswear e-commerce with custom cart and 60fps animations.
+                            </p>
+                            <a href="projects/ascend-elite.html" class="btn btn-ghost">View Case Study →</a>
+                        </div>
+                    </article>
+
+                    <!-- Skiip -->
+                    <article class="project-card" data-category="logistics" data-stack="vite vanilla-js">
+                        <img src="../images/work-5.jpg" alt="Skiip" class="project-image" />
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Logistics</span>
+                                <span class="project-tag">Real-time</span>
+                            </div>
+                            <h3 class="project-title">Skiip</h3>
+                            <p class="project-desc">Event logistics platform with real-time queue tracking and vendor
+                                dashboards.</p>
+                            <a href="projects/skiip.html" class="btn btn-ghost">View Case Study →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section section-cta reveal">
+            <div class="container cta-inner">
+                <h2>Ready to build your project?</h2>
+                <p>Let's create a high-performance digital asset for your business.</p>
+                <div class="cta-actions">
+                    <a class="btn btn-primary" href="contact.html">Start a project</a>
+                    <a class="btn btn-ghost" href="how-we-work.html">How we work</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <div class="brand brand-footer">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <span class="brand-text">DK Digital</span>
+                </div>
+                <p class="muted">Precision engineering for the modern web.</p>
+            </div>
+            <div class="footer-links" aria-label="Footer links">
+                <a href="../index.html#services">Services</a>
+                <a href="projects.html">Work</a>
+                <a href="../index.html#pricing">Pricing</a>
+                <a href="how-we-work.html">How we work</a>
+                <a href="team.html">Team</a>
+                <a href="our-standards.html">Standards</a>
+                <a href="learn/why-seo-matters.html">Learn</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-right">
+                <p class="muted">© <span id="year"></span> DK Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filtering logic
+        let currentCategory = 'all';
+        let currentStack = 'all';
+
+        function filterProjects() {
+            const cards = document.querySelectorAll('.project-card');
+
+            cards.forEach(card => {
+                const categories = card.dataset.category.split(' ');
+                const stacks = card.dataset.stack.split(' ');
+
+                const categoryMatch = currentCategory === 'all' || categories.includes(currentCategory);
+                const stackMatch = currentStack === 'all' || stacks.includes(currentStack);
+
+                if (categoryMatch && stackMatch) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Category filter buttons
+        document.querySelectorAll('[data-type="category"]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('[data-type="category"]').forEach(function (b) {
+                    b.classList.remove('active');
+                });
+                this.classList.add('active');
+                currentCategory = this.dataset.filter;
+                filterProjects();
+            });
+        });
+
+        // Stack filter buttons
+        document.querySelectorAll('[data-type="stack"]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('[data-type="stack"]').forEach(function (b) {
+                    b.classList.remove('active');
+                });
+                this.classList.add('active');
+                currentStack = this.dataset.filter;
+                filterProjects();
+            });
+        });
+    </script>
+</body>
+
+</html>
